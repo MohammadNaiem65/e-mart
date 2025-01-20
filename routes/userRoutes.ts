@@ -18,7 +18,7 @@ router.use('/:userId/products', productRouter)
 router.route('/')
 	// .get(userController.getAllUsers)
 	// .get(authController.protect, userController.getAllUsers)
-	.get(authController.protect, authController.restrictTo('user', 'admin'), userController.getAllUsers)
+	.get(authController.protect, authController.restrictTo('admin'), userController.getAllUsers)
 
 router.route('/:userId')
 	.get(userController.getUserById)
