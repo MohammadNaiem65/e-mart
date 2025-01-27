@@ -1,0 +1,7 @@
+.back-btn{
+    background-color: var(--primary-color);
+}
+.back-btn:hover{
+    background-color: var(--primary-color);
+    opacity: 0.8;
+}
