@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
 import BreadCrumbs from "../../../../../comps/BreadCrumbs/BreadCrumbs";
-import "./bramd.css"
 import RequiredStar from "../../../../../comps/RequiredStar/RequiredStar";
 import { FaCloudUploadAlt } from "react-icons/fa";
-const BrandCreate = () => {
+import "./Category.css"
+
+const CategoryAdd = () => {
   const breadcrumbItems = [
     { label: "Admin", link: "/" },
-    { label: "Brand", link: "/admin/brand" },
-    { label: "Add Brand" }, // No link for the current page
+    { label: "Category", link: "/admin/category" },
+    { label: "Add Category" }, // No link for the current page
   ];
 
   return (
@@ -17,65 +17,59 @@ const BrandCreate = () => {
       </div>
       <div className="card bg-white shadow-lg rounded-lg">
         <div className="card-header flex justify-between items-center p-4">
-          <h1 className="text-2xl font-semibold site-primary-text">Create New Brand</h1>
+          <h1 className="text-2xl font-semibold site-primary-text">
+            Create New Category
+          </h1>
         </div>
         <div className="card-body p-6">
           <form className="space-y-6">
-            {/* Name and URL */}
+            {/* Parent Category and Category Name */}
             <div className="grid grid-cols-3 md:grid-cols-3 gap-4">
               <div>
                 <label className="label">
-                  <span className="label-text font-medium flex">Name <RequiredStar/></span>
+                  <span className="label-text font-medium flex">
+                    Select Parent Category <RequiredStar />
+                  </span>
                 </label>
-                <input
-                  type="text"
-                  placeholder="Enter the Name"
-                  className="input input-md input-bordered rounded w-full"
-                />
+                <select className="select select-bordered w-full rounded">
+                  <option disabled selected>
+                    Choose a parent category
+                  </option>
+                  <option value="electronics">Electronics</option>
+                  <option value="fashion">Fashion</option>
+                  <option value="home-appliances">Home Appliances</option>
+                </select>
               </div>
-              <div>
-                <label className="label">
-                  <span className="label-text font-medium flex">URL <RequiredStar/></span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter the URL"
-                  className="input input-md input-bordered rounded w-full"
-                />
-              </div>
-              {/* Select Status */}
               <div>
                 <label className="label">
                   <span className="label-text font-medium flex">
-                    Select a Status <RequiredStar/>
+                    Category Name <RequiredStar />
                   </span>
                 </label>
-                <select className="select select-bordered rounded w-full">
-                  <option disabled selected>
-                    Select an option
-                  </option>
-                  <option>Active</option>
-                  <option>Inactive</option>
-                </select>
-              </div>
-            </div>
-
-            {/* Logo, Thumbnail Image, and Banner Image */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div>
-                <label className="label">
-                  <span className="label-text font-medium">Logo</span>
-                </label>
                 <input
-                  type="file"
-                  className="file-input file-input-md file-input-bordered rounded w-full"
+                  type="text"
+                  className="input input-bordered w-full rounded"
+                  placeholder="Enter category name"
                 />
               </div>
               <div>
                 <label className="label">
-                  <span className="label-text font-medium">
-                    Thumbnail Image
+                  <span className="label-text font-medium flex">
+                    Category Icon <RequiredStar />
                   </span>
+                </label>
+                <input
+                  type="file"
+                  className="file-input file-input-md rounded file-input-bordered w-full"
+                />
+              </div>
+            </div>
+
+            {/* Images and Status */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label className="label">
+                  <span className="label-text font-medium">Thumbnail Image</span>
                 </label>
                 <input
                   type="file"
@@ -91,24 +85,26 @@ const BrandCreate = () => {
                   className="file-input file-input-md file-input-bordered rounded w-full"
                 />
               </div>
-            </div>
-
-            {/* Description */}
-            <div>
-              <label className="label">
-                <span className="label-text font-medium">Description</span>
-              </label>
-              <textarea
-                placeholder="Enter the description"
-                className="textarea textarea-bordered rounded w-full"
-                rows="4"
-              ></textarea>
+              <div>
+                <label className="label">
+                  <span className="label-text font-medium flex">
+                    Select a Status <RequiredStar />
+                  </span>
+                </label>
+                <select className="select select-bordered w-full rounded">
+                  <option disabled selected>
+                    Select status
+                  </option>
+                  <option value="active">Active</option>
+                  <option value="inactive">Inactive</option>
+                </select>
+              </div>
             </div>
 
             {/* Submit Button */}
             <div className="flex justify-end">
               <button type="submit" className="submit-btn">
-               <FaCloudUploadAlt className="me-2"/> Submit
+              <FaCloudUploadAlt className="me-2"/>  Submit
               </button>
             </div>
           </form>
@@ -118,4 +114,4 @@ const BrandCreate = () => {
   );
 };
 
-export default BrandCreate;
+export default CategoryAdd;

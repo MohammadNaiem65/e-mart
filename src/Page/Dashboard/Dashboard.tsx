@@ -47,12 +47,12 @@ const Dashboard = () => {
           />
         ))}
       </div>
-      <div className="mt-4">
+      {/* <div className="mt-4">
         <img className="w-full" src="/public/assets/image1.png" alt="" />
       </div>
       <div className="mt-4">
         <img className="w-full" src="/public/assets/image2.png" alt="" />
-      </div>
+      </div> */}
     </div>
   );
 };

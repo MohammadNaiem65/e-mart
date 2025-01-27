@@ -19,6 +19,8 @@ import RolePermission from "../Page/Dashboard/DashboardPages/UserRole/RolePermis
 import SiteSetup from "../Page/Dashboard/DashboardPages/SiteSetting/SiteSetup";
 import BrandCreate from "../Page/Dashboard/DashboardPages/Product/Brands/BrandCreate";
 import BrandEdit from "../Page/Dashboard/DashboardPages/Product/Brands/BrandEdit";
+import CategoryEdit from "../Page/Dashboard/DashboardPages/Product/Category/CategoryEdit";
+import CategoryAdd from "../Page/Dashboard/DashboardPages/Product/Category/CategoryAdd";
 
 const router = createBrowserRouter([
   {
@@ -112,6 +114,14 @@ const router = createBrowserRouter([
       {
         path: "admin/brand/edit",
         element: <BrandEdit />,
+      },
+      {
+        path: "admin/category/edit",
+        element: <CategoryEdit />,
+      },
+      {
+        path: "admin/category/create",
+        element: <CategoryAdd />,
       },
       // Add more routes as needed
     ],
