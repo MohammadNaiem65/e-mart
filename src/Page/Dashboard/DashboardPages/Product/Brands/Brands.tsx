@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import BreadCrumbs from "../../../../../comps/BreadCrumbs/BreadCrumbs";
 import BrandsList from "./BrandsList";
-import { brandDatas } from "../../../../../mockData/brandData";
+// import { brandDatas } from "../../../../../mockData/brandData";
+import type { Brand } from '../../../../../http/product'
+import { getAllBrands } from '../../../../../http/product'
 
 const Brands = () => {
   const breadcrumbItems = [
@@ -11,9 +13,19 @@ const Brands = () => {
     { label: "Category List" },
   ];
 
-  const [data, setData] = useState(brandDatas);
+  // const [data, setData] = useState(brandDatas);
+  const [data, setData] = useState<Brand[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
+	useEffect(() => {
+		(async () => {
+			const brands = await getAllBrands()
+
+			if(!brands) return console.log('brand missing')
+			setData(brands)
+		})();
+	}, [])
 
   useEffect(() => {
     setLoading(false);
