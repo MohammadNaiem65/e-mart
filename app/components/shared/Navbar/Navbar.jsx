@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import NavLink from './NavLink';
 
 const links = [
     { name: 'Home', href: '/' },
@@ -9,6 +10,7 @@ const links = [
     { name: 'Pages', href: '/pages' },
 ];
 
+// Badge component
 function Badge({ children, className }) {
     return (
         <span
@@ -34,17 +36,30 @@ export default function Navbar() {
 
             <div className='text-lg text-primary flex items-center space-x-[1.563rem] divide-x-2 divide-stroke'>
                 {links.map((link, index) => (
-                    <Link
+                    <NavLink
                         key={index}
                         href={link.href}
                         className='pl-[1.563rem]'
                     >
                         {link.name}
-                    </Link>
+                    </NavLink>
                 ))}
             </div>
 
             <div className='text-xs text-[#808080] flex items-center justify-end space-x-[0.625rem]'>
+                <Link
+                    href={'/cart'}
+                    className='p-[0.625rem] flex flex-col items-center justify-end relative'
+                >
+                    <img
+                        src='/icons/shopping_cart.svg'
+                        alt='cart'
+                        className='size-[1.875rem]'
+                    />
+                    <span>Cart</span>
+                    <Badge className='right-2'>5</Badge>
+                </Link>
+
                 <Link
                     href={'/whishlist'}
                     className='p-[0.625rem] flex flex-col items-center justify-end relative'
@@ -59,21 +74,8 @@ export default function Navbar() {
                 </Link>
 
                 <Link
-                    href={'/cart'}
-                    className='p-[0.625rem] flex flex-col items-center justify-end relative'
-                >
-                    <img
-                        src='/icons/shopping_cart.svg'
-                        alt='cart'
-                        className='size-[1.875rem]'
-                    />
-                    <span>Cart</span>
-                    <Badge className='right-2'>2</Badge>
-                </Link>
-
-                <Link
                     href={'/compare'}
-                    className='p-[0.625rem] flex flex-col items-center justify-end relative'
+                    className='p-[0.625rem] flex flex-col items-center justify-end'
                 >
                     <img
                         src='/icons/text_compare.svg'
@@ -81,19 +83,6 @@ export default function Navbar() {
                         className='size-[1.875rem]'
                     />
                     <span>Compare</span>
-                    <Badge>2</Badge>
-                </Link>
-
-                <Link
-                    href={'/track-order'}
-                    className='p-[0.625rem] flex flex-col items-center justify-end'
-                >
-                    <img
-                        src='/icons/delivery_truck_speed.svg'
-                        alt={'track order'}
-                        className='size-[1.875rem]'
-                    />
-                    <span>Track Order</span>
                 </Link>
             </div>
         </nav>
