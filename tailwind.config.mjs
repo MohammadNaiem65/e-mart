@@ -27,6 +27,18 @@ export default {
                 'geist-mono': 'var(--font-geist-mono)',
                 inter: 'var(--font-inter)',
             },
+            animation: {
+                marquee: 'marquee var(--marquee-duration, 60s) linear infinite',
+            },
+            keyframes: {
+                marquee: {
+                    '0%': { transform: 'translateX(0)' },
+                    '100%': {
+                        transform:
+                            'translateX(calc(-50% - var(--marquee-gap, 50px)))',
+                    },
+                },
+            },
         },
     },
     plugins: [],
