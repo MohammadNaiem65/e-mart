@@ -19,6 +19,7 @@ export default {
             },
             textColor: {
                 primary: '#403F3F',
+                highlight: '#FF7143',
                 dark: '#252525',
             },
             fontFamily: {
