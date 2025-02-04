@@ -16,7 +16,7 @@ export default function GiftCards({ giftCards }) {
     };
 
     return (
-        <div className='slider-container max-h-[12.75rem] col-span-8'>
+        <div className={`gift-cards-container max-h-[12.75rem] col-span-8`}>
             <Slider className='gap-x-[0.875rem]' {...settings}>
                 {giftCards.map((card, index) => (
                     <img key={index} src={card.img} alt='Gift Card' />

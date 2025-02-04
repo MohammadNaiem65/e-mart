@@ -1,21 +1,21 @@
-.slick-slider {
+.gift-cards-container .slick-slider {
     height: 204px !important;
     width: 785px !important;
     display: flex !important;
     justify-content: center !important;
 }
 
-.slick-list {
+.gift-cards-container .slick-list {
     width: 694px;
 }
 
-.slick-slide img {
+.gift-cards-container .slick-slide img {
     width: 163px !important;
     height: 204px !important;
 }
 
-.slick-prev,
-.slick-next {
+.gift-cards-container .slick-prev,
+.gift-cards-container .slick-next {
     width: 2rem !important;
     height: 2rem !important;
     border-radius: 100% !important;
@@ -23,16 +23,16 @@
     position: absolute !important;
 }
 
-.slick-prev {
+.gift-cards-container .slick-prev {
     left: 0px !important;
 }
 
-.slick-next {
+.gift-cards-container .slick-next {
     right: 0px !important;
 }
 
-.slick-prev::before,
-.slick-next:before {
+.gift-cards-container .slick-prev::before,
+.gift-cards-container .slick-next:before {
     content: '' !important;
     width: 10px !important;
     height: 10px !important;
@@ -43,13 +43,13 @@
     left: 50% !important;
 }
 
-.slick-prev:before {
+.gift-cards-container .slick-prev:before {
     border-left: 2px solid #626262 !important;
     transform: rotate(-45deg) !important;
     translate: -35%;
 }
 
-.slick-next:before {
+.gift-cards-container .slick-next:before {
     border-right: 2px solid #626262 !important;
     transform: rotate(45deg) !important;
     translate: -65%;
