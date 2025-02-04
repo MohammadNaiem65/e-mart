@@ -57,7 +57,7 @@ export default function Navbar() {
                         className='size-[1.875rem]'
                     />
                     <span>Cart</span>
-                    <Badge className='right-2'>5</Badge>
+                    <Badge className='right-[6px]'>5</Badge>
                 </Link>
 
                 <Link
