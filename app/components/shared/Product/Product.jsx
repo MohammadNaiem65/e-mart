@@ -1,11 +1,20 @@
 import RatingStars from '../RatingStars/RatingStars';
 
 export default function Product({ product }) {
-    const { name, img, price, rating, totalRatings, discount } = product || {};
+    const { name, img, price, rating, totalRatings, badge, badgeColor } =
+        product || {};
 
     return (
         <div className='w-[17.75rem] h-[23.875rem] border border-stroke relative rounded-[0.625rem]'>
-            <span className='absolute top-5 left-5 bg-[#DA5555] text-white text-[10px]/[0.938rem] font-semibold px-3 py-1 rounded-full'>{discount}%</span>
+            {badge && (
+                <span
+                    className={`absolute top-5 left-5 text-white text-[10px]/[0.938rem] font-semibold px-3 py-1 rounded-full ${
+                        badgeColor ? `bg-[${badgeColor}]` : 'bg-[#DA5555]'
+                    }`}
+                >
+                    {badge}
+                </span>
+            )}
 
             <img
                 src={img}
@@ -27,13 +36,23 @@ export default function Product({ product }) {
                 </div>
 
                 <div className='mt-1 flex items-center gap-x-[4px]'>
-                    <RatingStars length={5} rating={rating} height='1rem' width='1rem' activeColor='#FF9500' muteColor='#cccccc' className='flex items-center' />
+                    <RatingStars
+                        length={5}
+                        rating={rating}
+                        height='1rem'
+                        width='1rem'
+                        activeColor='#FF9500'
+                        muteColor='#cccccc'
+                        className='flex items-center'
+                    />
                     <span className='text-sm text-gray-500 ml-1'>
                         ({totalRatings})
                     </span>
                 </div>
 
-                <p className='text-[#4880FF] text-md/[0.994rem] font-semibold mt-3'>${price}</p>
+                <p className='text-[#4880FF] text-md/[0.994rem] font-semibold mt-3'>
+                    ${price}
+                </p>
             </div>
         </div>
     );
