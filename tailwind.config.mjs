@@ -21,6 +21,7 @@ export default {
                 primary: '#403F3F',
                 highlight: '#FF7143',
                 dark: '#252525',
+                mute: '#808080',
             },
             fontFamily: {
                 geist: 'var(--font-geist-sans)',
