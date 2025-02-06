@@ -7,6 +7,8 @@ import SecondBanner from './components/Home/SecondBanner/SecondBanner';
 import ThirdBanner from './components/Home/ThirdBanner/ThirdBanner';
 import SecondCategoryProducts from './components/Home/SecondCategoryProducts/SecondCategoryProducts';
 import FourthBanner from './components/Home/FourthBanner/FourthBanner';
+import ThirdCategoryProducts from './components/Home/ThirdCategoryProducts/ThirdCategoryProducts';
+
 export default function Main() {
     return (
         <main className='bg-white font-inter'>
@@ -27,6 +29,8 @@ export default function Main() {
             <SecondCategoryProducts />
 
             <FourthBanner />
+
+            <ThirdCategoryProducts />
         </main>
     );
 }
