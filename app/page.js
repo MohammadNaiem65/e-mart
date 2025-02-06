@@ -6,7 +6,7 @@ import FlashSale from './components/Home/FlashSale/FlashSale';
 import SecondBanner from './components/Home/SecondBanner/SecondBanner';
 import ThirdBanner from './components/Home/ThirdBanner/ThirdBanner';
 import SecondCategoryProducts from './components/Home/SecondCategoryProducts/SecondCategoryProducts';
-
+import FourthBanner from './components/Home/FourthBanner/FourthBanner';
 export default function Main() {
     return (
         <main className='bg-white font-inter'>
@@ -25,6 +25,8 @@ export default function Main() {
             <ThirdBanner />
 
             <SecondCategoryProducts />
+
+            <FourthBanner />
         </main>
     );
 }
