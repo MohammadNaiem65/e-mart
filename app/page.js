@@ -9,6 +9,7 @@ import SecondCategoryProducts from './components/Home/SecondCategoryProducts/Sec
 import FourthBanner from './components/Home/FourthBanner/FourthBanner';
 import ThirdCategoryProducts from './components/Home/ThirdCategoryProducts/ThirdCategoryProducts';
 import FifthBanner from './components/Home/FifthBanner/FifthBanner';
+import FourthCategoryProducts from './components/Home/FourthCategoryProducts/FourthCategoryProducts';
 
 export default function Main() {
     return (
@@ -34,6 +35,8 @@ export default function Main() {
             <ThirdCategoryProducts />
 
             <FifthBanner />
+
+            <FourthCategoryProducts />
         </main>
     );
 }
