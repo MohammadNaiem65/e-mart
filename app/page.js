@@ -4,6 +4,7 @@ import Coupons from './components/Home/Coupons/Coupons';
 import FirstCategoryProducts from './components/Home/FirstCategoryProducts/FirstCategoryProducts';
 import FlashSale from './components/Home/FlashSale/FlashSale';
 import SecondBanner from './components/Home/SecondBanner/SecondBanner';
+import ThirdBanner from './components/Home/ThirdBanner/ThirdBanner';
 
 export default function Main() {
     return (
@@ -19,6 +20,8 @@ export default function Main() {
             <SecondBanner />
 
             <FirstCategoryProducts />
+
+            <ThirdBanner />
         </main>
     );
 }
