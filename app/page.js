@@ -11,6 +11,7 @@ import ThirdCategoryProducts from './components/Home/ThirdCategoryProducts/Third
 import FifthBanner from './components/Home/FifthBanner/FifthBanner';
 import FourthCategoryProducts from './components/Home/FourthCategoryProducts/FourthCategoryProducts';
 import TopBrands from './components/Home/TopBrands/TopBrands';
+import PopularProducts from './components/Home/PopularProducts/PopularProducts';
 
 export default function Main() {
     return (
@@ -40,6 +41,8 @@ export default function Main() {
             <FourthCategoryProducts />
 
             <TopBrands />
+
+            <PopularProducts />
         </main>
     );
 }
