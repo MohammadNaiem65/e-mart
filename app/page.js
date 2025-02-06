@@ -1,7 +1,9 @@
 import Banner from './components/Home/Banner/Banner';
 import Categories from './components/Home/Categories/Categories';
 import Coupons from './components/Home/Coupons/Coupons';
+import FirstCategoryProducts from './components/Home/FirstCategoryProducts/FirstCategoryProducts';
 import FlashSale from './components/Home/FlashSale/FlashSale';
+import SecondBanner from './components/Home/SecondBanner/SecondBanner';
 
 export default function Main() {
     return (
@@ -13,6 +15,10 @@ export default function Main() {
             <Coupons />
 
             <FlashSale />
+
+            <SecondBanner />
+
+            <FirstCategoryProducts />
         </main>
     );
 }
