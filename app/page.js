@@ -12,6 +12,7 @@ import FifthBanner from './components/Home/FifthBanner/FifthBanner';
 import FourthCategoryProducts from './components/Home/FourthCategoryProducts/FourthCategoryProducts';
 import TopBrands from './components/Home/TopBrands/TopBrands';
 import PopularProducts from './components/Home/PopularProducts/PopularProducts';
+import Newsletter from './components/Home/Newsletter/Newsletter';
 
 export default function Main() {
     return (
@@ -43,6 +44,8 @@ export default function Main() {
             <TopBrands />
 
             <PopularProducts />
+
+            <Newsletter />
         </main>
     );
 }
