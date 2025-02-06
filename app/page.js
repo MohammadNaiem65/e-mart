@@ -5,6 +5,7 @@ import FirstCategoryProducts from './components/Home/FirstCategoryProducts/First
 import FlashSale from './components/Home/FlashSale/FlashSale';
 import SecondBanner from './components/Home/SecondBanner/SecondBanner';
 import ThirdBanner from './components/Home/ThirdBanner/ThirdBanner';
+import SecondCategoryProducts from './components/Home/SecondCategoryProducts/SecondCategoryProducts';
 
 export default function Main() {
     return (
@@ -22,6 +23,8 @@ export default function Main() {
             <FirstCategoryProducts />
 
             <ThirdBanner />
+
+            <SecondCategoryProducts />
         </main>
     );
 }
