@@ -20,7 +20,7 @@ export default function Products() {
         rating: 4.5,
         price: 399.99,
         totalRatings: 1000,
-        discount: 20,
+        badge: '20%',
         img: '/product.png',
     };
 
