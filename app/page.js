@@ -10,6 +10,7 @@ import FourthBanner from './components/Home/FourthBanner/FourthBanner';
 import ThirdCategoryProducts from './components/Home/ThirdCategoryProducts/ThirdCategoryProducts';
 import FifthBanner from './components/Home/FifthBanner/FifthBanner';
 import FourthCategoryProducts from './components/Home/FourthCategoryProducts/FourthCategoryProducts';
+import TopBrands from './components/Home/TopBrands/TopBrands';
 
 export default function Main() {
     return (
@@ -37,6 +38,8 @@ export default function Main() {
             <FifthBanner />
 
             <FourthCategoryProducts />
+
+            <TopBrands />
         </main>
     );
 }
