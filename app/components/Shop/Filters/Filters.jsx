@@ -1,3 +1,4 @@
+import Availability from '../Availability/Availability';
 import CategoriesSection from '../CategoriesSection/CategoriesSection';
 import ProductSearch from '../ProductSearch/ProductSearch';
 import './Filters.css';
@@ -11,7 +12,10 @@ export default function Filters() {
 
             <section className=''>
                 <ProductSearch />
+
                 <CategoriesSection />
+
+                <Availability />
             </section>
         </section>
     );
