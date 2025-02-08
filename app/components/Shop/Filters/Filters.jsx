@@ -1,4 +1,6 @@
+import CategoriesSection from '../CategoriesSection/CategoriesSection';
 import ProductSearch from '../ProductSearch/ProductSearch';
+import './Filters.css';
 
 export default function Filters() {
     return (
@@ -7,7 +9,10 @@ export default function Filters() {
                 Filter Product
             </h2>
 
-            <ProductSearch />
+            <section className=''>
+                <ProductSearch />
+                <CategoriesSection />
+            </section>
         </section>
     );
 }
