@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+    --marquee-gap: 20px;
+    --marquee-duration: 60s;
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+    :root {
+        --marquee-gap: 18px;
+        --marquee-duration: 60s;
+    }
+}
