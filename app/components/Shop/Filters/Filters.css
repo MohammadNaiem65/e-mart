@@ -1,0 +1,21 @@
+/* Scrollbar */
+.filter-options::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+.filter-options::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #f4f4f4;
+}
+
+/* Handle */
+.filter-options::-webkit-scrollbar-thumb {
+    background-color: #d9d9d9;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.filter-options::-webkit-scrollbar-thumb:hover {
+    background: #ff7143;
+}
