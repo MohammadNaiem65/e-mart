@@ -62,7 +62,7 @@ export function PriceRangeSlider({ min, max, onChange }) {
                 <div className='flex items-center justify-between flex-1'>
                     <label
                         htmlFor='min-price'
-                        class='text-[#7f7f7f] text-sm font-normal'
+                        className='text-[#7f7f7f] text-sm font-normal'
                     >
                         Min.
                     </label>
@@ -78,7 +78,7 @@ export function PriceRangeSlider({ min, max, onChange }) {
                 <div className='flex items-center justify-between flex-1'>
                     <label
                         htmlFor='max-price'
-                        class='text-[#7f7f7f] text-sm font-normal'
+                        className='text-[#7f7f7f] text-sm font-normal'
                     >
                         Max.
                     </label>

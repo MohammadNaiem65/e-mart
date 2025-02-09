@@ -1,6 +1,6 @@
-import Availability from '../Availability/Availability';
-import CategoriesSection from '../CategoriesSection/CategoriesSection';
-import PriceRange from '../PriceRange/PriceRange';
+import Availability from './Availability/Availability';
+import CategoriesSection from './CategoriesSection/CategoriesSection';
+import PriceRange from './PriceRange/PriceRange';
 import ProductSearch from '../ProductSearch/ProductSearch';
 import './Filters.css';
 
