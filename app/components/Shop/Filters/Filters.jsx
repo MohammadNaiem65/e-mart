@@ -3,6 +3,7 @@ import CategoriesSection from './CategoriesSection/CategoriesSection';
 import PriceRange from './PriceRange/PriceRange';
 import ProductSearch from '../ProductSearch/ProductSearch';
 import './Filters.css';
+import Colors from './Colors/Colors';
 
 export default function Filters() {
     return (
@@ -19,6 +20,8 @@ export default function Filters() {
                 <Availability />
 
                 <PriceRange />
+
+                <Colors />
             </section>
         </section>
     );
