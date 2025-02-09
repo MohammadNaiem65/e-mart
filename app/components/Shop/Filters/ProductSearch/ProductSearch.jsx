@@ -1,4 +1,4 @@
-import InputForm from '../shared/InputForm';
+import InputForm from '../../shared/InputForm';
 
 export default function ProductSearch() {
     return (
