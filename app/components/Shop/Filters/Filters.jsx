@@ -2,8 +2,9 @@ import Availability from './Availability/Availability';
 import CategoriesSection from './CategoriesSection/CategoriesSection';
 import PriceRange from './PriceRange/PriceRange';
 import ProductSearch from '../ProductSearch/ProductSearch';
-import './Filters.css';
 import Colors from './Colors/Colors';
+import Sizes from './Sizes/Sizes';
+import './Filters.css';
 
 export default function Filters() {
     return (
@@ -22,6 +23,8 @@ export default function Filters() {
                 <PriceRange />
 
                 <Colors />
+
+                <Sizes />
             </section>
         </section>
     );
