@@ -4,6 +4,7 @@ import PriceRange from './PriceRange/PriceRange';
 import ProductSearch from '../ProductSearch/ProductSearch';
 import Colors from './Colors/Colors';
 import Sizes from './Sizes/Sizes';
+import BrandsSection from './BrandsSection/BrandsSection';
 import './Filters.css';
 
 export default function Filters() {
@@ -25,6 +26,8 @@ export default function Filters() {
                 <Colors />
 
                 <Sizes />
+
+                <BrandsSection />
             </section>
         </section>
     );
