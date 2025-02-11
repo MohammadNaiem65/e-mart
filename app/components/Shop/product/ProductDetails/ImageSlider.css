@@ -1,0 +1,7 @@
+.slick-arrow {
+    fill: #979797 !important;
+}
+
+.slick-arrow:last-child {
+    right: -10;
+}
