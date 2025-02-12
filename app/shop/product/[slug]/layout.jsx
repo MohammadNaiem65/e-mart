@@ -10,7 +10,7 @@ export default async function layout({ children, params }) {
         <section className='mt-[2.375rem]'>
             <RoutePath path={slug} />
 
-            <section className='w-full mt-4 grid grid-cols-12 gap-x-4'>
+            <section className='w-full mt-4 grid grid-cols-12 gap-x-5'>
                 <section className='col-span-8'>
                     <ProductDetails slug={slug} />
                     {children}
