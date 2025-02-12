@@ -65,9 +65,8 @@ export default function ImageSlider({ images }) {
                 {...sliderTwoSetting}
             >
                 {images.map((image, index) => (
-                    <div>
+                    <div key={index}>
                         <img
-                            key={index}
                             src={image}
                             alt='product images'
                             className='size-[4.5rem] object-cover rounded-[10px]'
