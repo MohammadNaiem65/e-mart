@@ -4,8 +4,7 @@ import ImageSlider from './ImageSlider';
 export default function ProductDetails({ slug }) {
     const product = {
         user: '67986c8660c5024225bf3e76',
-        childCategory: '67986d9860c5024225bf3e8a',
-        name: 'product with category 241, which is 3 images url + dataUrl',
+        name: 'Product with category 241, which is 3 images url + dataUrl.',
         skuCode: 'bt-h2ls3',
         manufacturerCode: 'brand-name-h2ls3',
 
@@ -13,6 +12,8 @@ export default function ProductDetails({ slug }) {
         discount: '20',
         vat: '2',
         tax: '5',
+        rating: 3,
+        brand: 'brand-name',
 
         coverPhoto:
             'https://images.pexels.com/photos/748598/pexels-photo-748598.jpeg',
@@ -36,10 +37,10 @@ export default function ProductDetails({ slug }) {
     };
 
     return (
-        <section className='col-span-8 w-full flex items-start gap-x-3'>
+        <section className='col-span-8 w-full pb-10 border-b border-stroke border-dashed flex items-start gap-x-3'>
             <ImageSlider images={product.images} />
 
-            <Details />
+            <Details productDetails={product} />
         </section>
     );
 }
