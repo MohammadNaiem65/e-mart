@@ -1,5 +1,6 @@
-import Reviews from '@/app/components/Shop/product/Reviews/Reviews';
 import { FaStar } from 'react-icons/fa';
+import ReviewForm from '@/app/components/Shop/product/Reviews/ReviewForm';
+import Reviews from '@/app/components/Shop/product/Reviews/Reviews';
 
 export default function Review() {
     const averageRating = 2.5;
@@ -66,6 +67,9 @@ export default function Review() {
 
             {/* Reviews Section */}
             <Reviews />
+
+            {/* Review Form */}
+            <ReviewForm />
         </section>
     );
 }
