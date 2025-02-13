@@ -63,6 +63,9 @@ export default function Review() {
                     );
                 })}
             </div>
+
+            {/* Reviews Section */}
+            <Reviews />
         </section>
     );
 }
