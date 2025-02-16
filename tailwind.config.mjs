@@ -30,7 +30,9 @@ export default {
     			inter: 'var(--font-inter)'
     		},
     		animation: {
-    			marquee: 'marquee var(--marquee-duration, 60s) linear infinite'
+    			marquee: 'marquee var(--marquee-duration, 60s) linear infinite',
+    			'accordion-down': 'accordion-down 0.2s ease-out',
+    			'accordion-up': 'accordion-up 0.2s ease-out'
     		},
     		keyframes: {
     			marquee: {
@@ -39,6 +41,22 @@ export default {
     				},
     				'100%': {
     					transform: 'translateX(calc(-50% - var(--marquee-gap, 50px)))'
+    				}
+    			},
+    			'accordion-down': {
+    				from: {
+    					height: '0'
+    				},
+    				to: {
+    					height: 'var(--radix-accordion-content-height)'
+    				}
+    			},
+    			'accordion-up': {
+    				from: {
+    					height: 'var(--radix-accordion-content-height)'
+    				},
+    				to: {
+    					height: '0'
     				}
     			}
     		},
