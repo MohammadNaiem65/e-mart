@@ -5,7 +5,7 @@ import NavLink from './NavLink';
 const links = [
     { name: 'Home', href: '/' },
     { name: 'Shop', href: '/shop' },
-    { name: 'Coupon', href: '/coupon' },
+    { name: 'Offers', href: '/offers' },
     { name: 'Blogs', href: '/blogs' },
     { name: 'Pages', href: '/pages' },
 ];
@@ -39,7 +39,7 @@ export default function Navbar() {
                     <NavLink
                         key={index}
                         href={link.href}
-                        className='pl-[1.563rem]'
+                        className='pl-[1.563rem] capitalize'
                     >
                         {link.name}
                     </NavLink>
