@@ -9,10 +9,9 @@ export default function PageFilters() {
                     id='product-quantity'
                     name='product-quantity'
                     className='ml-2 px-2 py-1 bg-[#F4F4F4] rounded'
+                    defaultValue={9}
                 >
-                    <option value={9} selected>
-                        9
-                    </option>
+                    <option value={9}>9</option>
                     <option value={15}>15</option>
                     <option value={21}>21</option>
                 </select>

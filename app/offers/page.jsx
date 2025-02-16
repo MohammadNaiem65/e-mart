@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import PageFilters from '../components/Offers/PageFilters/PageFilters';
+import Offers from '../components/Offers/Offers/Offers';
 
 export default function page() {
     return (
@@ -18,7 +19,7 @@ export default function page() {
                 <PageFilters />
             </section>
 
-            
+            <Offers />
         </section>
     );
 }
