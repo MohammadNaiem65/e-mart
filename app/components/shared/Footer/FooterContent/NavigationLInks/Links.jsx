@@ -1,29 +1,55 @@
 import Link from 'next/link';
 
 export default function Links() {
+    const links = [
+        {
+            name: 'Home',
+            url: '/',
+        },
+        {
+            name: 'Shop',
+            url: '/shop',
+        },
+        {
+            name: 'Offers',
+            url: '/offers',
+        },
+        {
+            name: 'Blogs',
+            url: '/blogs',
+        },
+        {
+            name: 'About Us',
+            url: '/about-us',
+        },
+        {
+            name: 'Contact Us',
+            url: '/contact-us',
+        },
+        {
+            name: 'Privacy Policy',
+            url: '/privacy-policy',
+        },
+        {
+            name: 'Refund Policy',
+            url: '/refund-policy',
+        },
+        {
+            name: 'FAQ',
+            url: '/faq',
+        },
+    ];
+
     return (
         <section>
-            <h2 className='text-[1.75rem]'>Useful Links</h2>
+            <h2 className='text-xl'>Useful Links</h2>
 
             <div className='mt-6 flex flex-col gap-y-1'>
-                <Link href='/about-us' className='capitalize'>
-                    About Us
-                </Link>
-                <Link href='/contact-us' className='capitalize'>
-                    Contact Us
-                </Link>
-                <Link href='/privacy-policy' className='capitalize'>
-                    Privacy Policy
-                </Link>
-                <Link href='/refund-policy' className='capitalize'>
-                    Refund Policy
-                </Link>
-                <Link href='/all-products' className='capitalize'>
-                    All Products
-                </Link>
-                <Link href='/contact' className='capitalize'>
-                    Contact
-                </Link>
+                {links.map((link, index) => (
+                    <Link href={link.url} key={index} className='w-fit text-mute hover:text-white capitalize'>
+                        {link.name}
+                    </Link>
+                ))}
             </div>
         </section>
     );

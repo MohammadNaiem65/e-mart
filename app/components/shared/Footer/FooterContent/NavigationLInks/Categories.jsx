@@ -1,29 +1,59 @@
 import Link from 'next/link';
 
 export default function Categories() {
+    const categories = [
+        {
+            name: 'Home',
+            url: '/',
+        },
+        {
+            name: 'Shop',
+            url: '/shop',
+        },
+        {
+            name: 'Offers',
+            url: '/offers',
+        },
+        {
+            name: 'Blogs',
+            url: '/blogs',
+        },
+        {
+            name: 'About Us',
+            url: '/about-us',
+        },
+        {
+            name: 'Contact Us',
+            url: '/contact-us',
+        },
+        {
+            name: 'Privacy Policy',
+            url: '/privacy-policy',
+        },
+        {
+            name: 'Refund Policy',
+            url: '/refund-policy',
+        },
+        {
+            name: 'FAQ',
+            url: '/faq',
+        },
+    ];
+
     return (
         <section>
-            <h2 className='text-[1.75rem]'>Categories</h2>
+            <h2 className='text-xl'>Categories</h2>
 
             <div className='mt-6 flex flex-col gap-y-1'>
-                <Link href='/about-us' className='capitalize'>
-                    Electrical Devices
-                </Link>
-                <Link href='/contact-us' className='capitalize'>
-                    Gadgets
-                </Link>
-                <Link href='/privacy-policy' className='capitalize'>
-                    Health & Beauty
-                </Link>
-                <Link href='/refund-policy' className='capitalize'>
-                    Sports & Outdoor
-                </Link>
-                <Link href='/all-products' className='capitalize'>
-                    Fashion And Beauty
-                </Link>
-                <Link href='/contact' className='capitalize'>
-                    Furniture
-                </Link>
+                {categories.map((category, index) => (
+                    <Link
+                        href={`/shop?category=${category.url}`}
+                        key={index}
+                        className='w-fit text-mute hover:text-white capitalize'
+                    >
+                        {category.name}
+                    </Link>
+                ))}
             </div>
         </section>
     );
