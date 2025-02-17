@@ -1,3 +1,7 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
+import { FaBloggerB } from 'react-icons/fa';
 import {
     Breadcrumb,
     BreadcrumbItem,
@@ -6,9 +10,12 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
-import { FaBloggerB } from 'react-icons/fa';
 
-export default function RouteBreadcrumb({ path }) {
+export default function RouteBreadcrumb() {
+    const pathname = usePathname();
+
+    const paths = pathname?.split('/')?.slice(1);
+
     return (
         <Breadcrumb className='col-span-12'>
             <BreadcrumbList>
@@ -20,22 +27,24 @@ export default function RouteBreadcrumb({ path }) {
                 </BreadcrumbItem>
 
                 {/* Links */}
-                {path ? (
-                    <>
+                {paths?.map((path, index, { length }) =>
+                    index === length - 1 ? (
                         <BreadcrumbItem>
-                            <BreadcrumbLink href='/blogs'>Blogs</BreadcrumbLink>
+                            <BreadcrumbPage className='capitalize'>
+                                {path}
+                            </BreadcrumbPage>
                         </BreadcrumbItem>
+                    ) : (
+                        <>
+                            <BreadcrumbItem>
+                                <BreadcrumbLink className='capitalize'>
+                                    {path}
+                                </BreadcrumbLink>
+                            </BreadcrumbItem>
 
-                        <BreadcrumbSeparator>/</BreadcrumbSeparator>
-
-                        <BreadcrumbItem>
-                            <BreadcrumbPage>{path}</BreadcrumbPage>
-                        </BreadcrumbItem>
-                    </>
-                ) : (
-                    <BreadcrumbItem>
-                        <BreadcrumbPage>Blogs</BreadcrumbPage>
-                    </BreadcrumbItem>
+                            <BreadcrumbSeparator>/</BreadcrumbSeparator>
+                        </>
+                    )
                 )}
             </BreadcrumbList>
         </Breadcrumb>
