@@ -29,21 +29,21 @@ export default function RouteBreadcrumb() {
                 {/* Links */}
                 {paths?.map((path, index, { length }) =>
                     index === length - 1 ? (
-                        <BreadcrumbItem>
+                        <BreadcrumbItem key={index}>
                             <BreadcrumbPage className='capitalize'>
                                 {path}
                             </BreadcrumbPage>
                         </BreadcrumbItem>
                     ) : (
-                        <>
+                        <div key={index} className='flex items-center gap-x-2'>
                             <BreadcrumbItem>
-                                <BreadcrumbLink className='capitalize'>
+                                <BreadcrumbLink className='capitalize hover:text-highlight'>
                                     {path}
                                 </BreadcrumbLink>
                             </BreadcrumbItem>
 
                             <BreadcrumbSeparator>/</BreadcrumbSeparator>
-                        </>
+                        </div>
                     )
                 )}
             </BreadcrumbList>
