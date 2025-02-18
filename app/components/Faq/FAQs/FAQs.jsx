@@ -1,13 +1,13 @@
 'use client';
 
+import { useState } from 'react';
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
 } from '@/components/ui/accordion';
-import { useState } from 'react';
-import Sidebar from '../Sidebar';
+import Sidebar from './Sidebar';
 
 export default function FAQs() {
     const [activeCategory, setActiveCategory] = useState('Orders and Payments');
@@ -57,7 +57,7 @@ export default function FAQs() {
                 activeCategory={activeCategory}
                 setActiveCategory={setActiveCategory}
             />
-            
+
             {/* Main content */}
             <div className='flex-1 p-8'>
                 <Accordion type='single' collapsible className='w-full'>
